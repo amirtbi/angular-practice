@@ -1,0 +1,36 @@
+<form [formGroup]="useForm" (ngSubmit)="submit()">
+    <mat-form-field class="auth-full-width">
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="username" placeholder="username...">
+        @if (useForm.controls.username.hasError('required')) {
+        <mat-error>Username is required</mat-error>
+        }
+        @if (useForm.controls.username.hasError('minlength')) {
+        <mat-error>At least 2 characters</mat-error>
+        }
+    </mat-form-field>
+
+    <mat-form-field class="auth-full-width">
+        <mat-label>Phone number</mat-label>
+        <input matInput type="tell" formControlName="phoneNumber" placeholder="09336207447">
+        @if (useForm.controls.phoneNumber.hasError('required')) {
+        <mat-error>Phone number is required</mat-error>
+        }
+        @if (useForm.controls.phoneNumber.hasError('phoneNumber')) {
+        <mat-error>Enter a valid phone number</mat-error>
+        }
+    </mat-form-field>
+
+    <mat-form-field class="auth-full-width">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" placeholder="test@gmail.com...">
+        @if (useForm.controls.email.hasError('required')) {
+        <mat-error>Email is required</mat-error>
+        }
+        @if (useForm.controls.email.hasError('email')) {
+        <mat-error>Enter a valid email</mat-error>
+        }
+    </mat-form-field>
+
+    <button mat-button type="submit" [disabled]="useForm.invalid || submitting()">Sign in</button>
+</form>

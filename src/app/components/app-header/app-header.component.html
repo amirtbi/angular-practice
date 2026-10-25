@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+    <span class="brand">Shopping Card</span>
+    <nav>
+        <button mat-button>Home</button>
+        <button mat-button>Products</button>
+    </nav>
+    <span class="spacer"></span>
+
+    <app-shopping-cart/>
+    @if (authService.user()) {
+        <button (click)="logout()" mat-stroked-button>Logout</button>
+    } @else {
+        <button (click)="goToLoginPage()" mat-stroked-button>Login</button>
+    }
+</mat-toolbar>

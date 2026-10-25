@@ -1,0 +1,16 @@
+:host {
+    display: block;
+}
+
+.brand {
+    margin-right: 16px;
+    font-weight: 500;
+}
+
+nav {
+    display: flex;
+}
+
+.spacer {
+    flex: 1;
+}

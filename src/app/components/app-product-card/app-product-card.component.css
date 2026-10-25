@@ -1,0 +1,8 @@
+:host {
+    display: block;
+    max-width: 400px;
+}
+
+.product-card-avatar {
+    background-size: cover;
+}

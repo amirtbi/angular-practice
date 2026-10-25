@@ -1,0 +1,8 @@
+<main>
+    <h1>Shopping Card</h1>
+    <div class="product-card-container">
+        @for(product of products;track product.id){
+            <app-product-card [product]="product"/>
+        }
+    </div>
+</main>
