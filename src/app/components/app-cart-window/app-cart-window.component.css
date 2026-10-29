@@ -1,0 +1,55 @@
+.empty,
+.summary,
+.info p {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 13px;
+}
+
+.summary {
+    margin-bottom: 12px;
+}
+
+.cart-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+    padding: 10px;
+}
+
+.cart-row img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.info {
+    flex: 1;
+    min-width: 0;
+}
+
+.info h3 {
+    margin: 0 0 2px;
+    font-size: 15px;
+}
+
+.qty {
+    display: flex;
+    align-items: center;
+}
+
+.line-price {
+    min-width: 56px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 600;
+}

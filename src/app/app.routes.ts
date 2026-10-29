@@ -10,6 +10,14 @@ export const routes: Routes = [
     },
   },
   {
+    path:"shopping-cart",
+    canActivate:[CanActivate],
+    loadComponent:()=>{
+      return import("./Pages/shopping-cart/shopping-cart.component").then(m=>m.ShoppingCart)
+    }
+  },
+
+  {
     path: 'authentication',
     loadComponent: () => {
       return import('./Pages/authentication/authentication.component').then(

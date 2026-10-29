@@ -1,0 +1,30 @@
+<main>
+    <h1>Shopping Cart</h1>
+
+    @if (cartItems().length === 0) {
+        <p class="empty">Your cart is empty.</p>
+    } @else {
+        <p class="summary">{{ itemCount() }} items</p>
+        <div>
+            <span>Total Price:${{totalPrice()}}</span>
+        </div>
+        <div class="cart-list">
+            @for (item of cartItems(); track item.product.id) {
+                <mat-card class="cart-row">
+                    <img [src]="item.product.image" [alt]="item.product.title">
+                    <div class="info">
+                        <h2>{{ item.product.title }}</h2>
+                        <p>{{ item.product.subtitle }}</p>
+                    </div>
+                    <div class="qty">
+                        <button mat-icon-button type="button" (click)="cartService.removeFromCart(item.product.id)" aria-label="Decrease quantity">−</button>
+                        <span>{{ item.amount }}</span>
+                        <button mat-icon-button type="button" (click)="cartService.addToCart(item.product)" aria-label="Increase quantity">+</button>
+                    </div>
+                </mat-card>
+            }
+        </div>
+
+
+    }
+</main>

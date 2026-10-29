@@ -1,0 +1,50 @@
+main {
+    padding: 16px 24px;
+}
+
+.empty,
+.summary,
+.info p {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.cart-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 720px;
+}
+
+.cart-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px;
+}
+
+.cart-row img {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.info {
+    flex: 1;
+}
+
+.info h2,
+.info p {
+    margin: 0;
+}
+
+.info h2 {
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+
+.qty {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}

@@ -14,3 +14,7 @@ nav {
 .spacer {
     flex: 1;
 }
+
+.active-link{
+    font-weight: 600;
+}

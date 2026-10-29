@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>{{ data.title }}</h2>
+<mat-dialog-content>
+    @if (cartItems().length === 0) {
+        <p class="empty">Your cart is empty.</p>
+    } @else {
+        <p class="summary">{{ itemCount() }} items</p>
+        @for (item of cartItems(); track item.product.id) {
+            <mat-card class="cart-row">
+                <img [src]="item.product.image" [alt]="item.product.title">
+                <div class="info">
+                    <h3>{{ item.product.title }}</h3>
+                    <p>{{ item.product.subtitle }}</p>
+                    <p>${{ item.product.price }} each</p>
+                </div>
+                <div class="qty">
+                    <button mat-icon-button type="button" (click)="cartService.removeFromCart(item.product.id)" aria-label="Decrease quantity">−</button>
+                    <span>{{ item.amount }}</span>
+                    <button mat-icon-button type="button" (click)="cartService.addToCart(item.product)" aria-label="Increase quantity">+</button>
+                </div>
+                <span class="line-price">${{ item.product.price * item.amount }}</span>
+            </mat-card>
+        }
+        <div class="total">
+            <span>Total</span>
+            <span>${{ totalPrice() }}</span>
+        </div>
+    }
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-stroked-button type="button" (click)="close()">Close</button>
+</mat-dialog-actions>

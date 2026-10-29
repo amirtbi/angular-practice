@@ -4,4 +4,5 @@ export interface IProduct{
     subtitle:string;
     id:number;
     image:string;
+    price:number
 }

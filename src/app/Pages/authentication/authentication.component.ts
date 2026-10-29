@@ -4,6 +4,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from "@angula
 import {MatInputModule} from "@angular/material/input"
 import {MatFormFieldModule} from "@angular/material/form-field"
 import { MatButtonModule } from "@angular/material/button";
+import { MatCardModule } from "@angular/material/card";
 import { Router } from "@angular/router";
 
 @Component({
@@ -11,7 +12,7 @@ import { Router } from "@angular/router";
   templateUrl: './authentication.component.html',
   styleUrl: './authentication.component.css',
   standalone: true,
-  imports: [ReactiveFormsModule, MatButtonModule, MatInputModule, MatFormFieldModule],
+  imports: [ReactiveFormsModule, MatButtonModule, MatInputModule, MatFormFieldModule,MatCardModule],
 })
 export class AppAuthentication {
   authService = inject(AuthService);

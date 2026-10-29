@@ -17,6 +17,7 @@ export class AppHome {
       subtitle: 'subtitle',
       description: 'Product A description',
       image: 'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',
+      price:200
     },
     {
       id: 2,
@@ -25,6 +26,8 @@ export class AppHome {
       description:
         'Product B description with enhanced features and premium support.',
       image: 'https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/1.webp',
+      price:100
+
     },
     {
       id: 3,
@@ -33,6 +36,7 @@ export class AppHome {
       description:
         'Product C description, an affordable option for everyday use.',
       image: 'https://cdn.dummyjson.com/product-images/beauty/powder-canister/1.webp',
+      price:160
     },
     {
       id: 4,
@@ -40,6 +44,7 @@ export class AppHome {
       subtitle: 'New Arrival',
       description: 'Product D description, the latest addition to our lineup.',
       image: 'https://cdn.dummyjson.com/product-images/beauty/red-lipstick/1.webp',
+      price:400
     },
     {
       id: 5,
@@ -48,6 +53,7 @@ export class AppHome {
       description:
         'Product E description, our most popular product among customers.',
       image: 'https://cdn.dummyjson.com/product-images/beauty/red-nail-polish/1.webp',
+      price:1200
     },
     {
       id: 6,
@@ -55,6 +61,7 @@ export class AppHome {
       subtitle: 'Limited Edition',
       description: 'Product F description, available for a limited time only.',
       image: 'https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/1.webp',
+      price:600
     },
   ];
 }

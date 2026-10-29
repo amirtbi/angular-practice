@@ -25,6 +25,7 @@ export class AuthService {
   }
 
   logOut(){
+    this.router.navigate(["/authentication"],{queryParams:{user:"amir"}})
     this.user.set(null)
     this.router.navigate(["/authentication"])
   }

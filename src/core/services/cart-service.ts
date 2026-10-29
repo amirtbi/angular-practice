@@ -1,7 +1,7 @@
 import { Injectable, signal } from "@angular/core";
 import { IProduct } from "../product.interface";
 
-interface ICart {
+export interface ICart {
     product: IProduct;
     amount: number;
 }
@@ -12,6 +12,7 @@ interface ICart {
 export class CartService {
     private readonly items = signal<ICart[]>([]);
     readonly cartItems = this.items.asReadonly();
+
 
     addToCart(product: IProduct) {
         this.items.update(items => {
