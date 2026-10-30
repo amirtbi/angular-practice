@@ -21,13 +21,10 @@
         </mat-form-field>
     
         <mat-form-field class="auth-full-width">
-            <mat-label>Phone number</mat-label>
-            <input matInput type="tell" formControlName="phoneNumber" placeholder="09336207447">
-            @if (useForm.controls.phoneNumber.hasError('required')) {
-            <mat-error>Phone number is required</mat-error>
-            }
-            @if (useForm.controls.phoneNumber.hasError('phoneNumber')) {
-            <mat-error>Enter a valid phone number</mat-error>
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password" placeholder="password">
+            @if (useForm.controls.password.hasError('required')) {
+            <mat-error>Password is required</mat-error>
             }
         </mat-form-field>
     
@@ -42,6 +39,10 @@
             }
         </mat-form-field>
     
+        @if (error()) {
+            <p class="auth-error">{{ error() }}</p>
+        }
+
         <button mat-button="filled" type="submit" [disabled]="useForm.invalid || submitting()">Sign in</button>
     </form>    
 </mat-card-content>

@@ -1,8 +1,26 @@
 <main>
     <h1>Shopping Card</h1>
     <div class="product-card-container">
-        @for(product of products;track product.id){
-            <app-product-card [product]="product"/>
-        }
+        <ng-template #isLoading>
+            <h1>loading...</h1>
+        </ng-template>
+        <ng-template #errro>
+            <h1>Error occured</h1>
+        </ng-template>
+        <ng-template #completed>
+            <h1>All Requests completed</h1>
+             @for(product of products;track product.id){
+                <app-product-card [product]="product"/>
+            }
+        </ng-template>
+
+        <ng-container [ngTemplateOutlet]="loading() ? isLoading : completed"/>
+
+        <!-- @if(loading()){
+            <h1>loading...</h1>
+        }@else{
+
+           
+        } -->
     </div>
 </main>

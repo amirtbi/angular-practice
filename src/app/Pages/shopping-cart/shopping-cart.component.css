@@ -2,6 +2,13 @@ main {
     padding: 16px 24px;
 }
 
+.active {
+    background-color: purple;
+    color: black;
+    border: 1px solid orange;
+}
+
+
 .empty,
 .summary,
 .info p {

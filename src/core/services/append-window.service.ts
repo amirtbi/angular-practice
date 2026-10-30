@@ -8,7 +8,7 @@ import {MatDialog, MatDialogConfig} from "@angular/material/dialog"
 export class WindowService{
     private dialog = inject(MatDialog)
 
-    open<T=unknown,D=unknown>(component:ComponentType<unknown>,config:MatDialogConfig<D>){
+    open<T=unknown,D=unknown>(component:ComponentType<T>,config:MatDialogConfig<D>){
         this.dialog.open(component,config)
     }
 }

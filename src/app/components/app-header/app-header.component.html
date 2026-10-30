@@ -2,7 +2,7 @@
     <span class="brand">Shopping Card</span>
     <nav>
             <a mat-button routerLink="/" routerLinkActive="active-link">Home</a>
-        @if(authService.user()){
+        @if(authService.isAuthenticated()){
             <a mat-button routerLink="/shopping-cart" routerLinkActive="active-link">
             Shopping Cart
         </a>
@@ -10,9 +10,9 @@
     </nav>
     <span class="spacer"></span>
 
-    @if(authService.user()){<app-shopping-cart />}
+    @if(authService.isAuthenticated()){<app-shopping-cart />}
 
-    @if (authService.user()) {
+    @if (authService.isAuthenticated()) {
         <button (click)="logout()" mat-stroked-button>Logout</button>
     } @else {
         <button (click)="goToLoginPage()" mat-stroked-button>Login</button>
